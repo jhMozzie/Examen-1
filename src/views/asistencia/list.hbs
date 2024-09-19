@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <h2>Lista de Asistencias</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each asistencias}}
+        <tr>
+          <td>{{this.id}}</td>
+          <td>{{this.nombre}}</td>
+          <td>{{this.fecha}}</td>
+          <td>
+            <a
+              href="/asistencia/edit/{{this.id}}"
+              class="btn btn-warning btn-sm"
+            >Editar</a>
+            <a
+              href="/asistencia/delete/{{this.id}}"
+              class="btn btn-danger btn-sm"
+            >Eliminar</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

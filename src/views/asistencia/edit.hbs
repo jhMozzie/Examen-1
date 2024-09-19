@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <h2>Editar Asistencia</h2>
+  <form action="/asistencia/edit/{{asistencia.id}}" method="POST">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        name="nombre"
+        value="{{asistencia.nombre}}"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="fecha" class="form-label">Fecha</label>
+      <input
+        type="date"
+        class="form-control"
+        id="fecha"
+        name="fecha"
+        value="{{asistencia.fecha}}"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+  </form>
+</div>
